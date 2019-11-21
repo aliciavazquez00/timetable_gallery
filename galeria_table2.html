@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Galeria Table 2</title>
+  <style>
+    :root {
+      --imatges: 8;
+      --escala: 5;
+      --imatge-petita-width: calc(var(--escala)*16px);
+      --imatge-petita-height: calc(var(--escala)*9px);
+      --imatge-grossa-height: calc(var(--imatges)*var(--imatge-petita-height));
+    }
+
+    table,
+    tr,
+    td {
+      border-collapse: collapse;
+      margin: auto;
+      padding: 0;
+      line-height: 0;
+    }
+
+    tr:nth-child(2)>td:first-child>img:last-child {
+      height: var(--imatge-grossa-height);
+    }
+
+    tr:first-child>td:first-child>img:first-child,
+    tr:first-child>td:nth-child(2)>img:first-child,
+    tr:first-child>td:nth-child(3)>img:first-child,
+    tr:first-child>td:nth-child(4)>img:first-child,
+    tr:first-child>td:nth-child(5)>img:first-child,
+    tr:first-child>td:nth-child(6)>img:first-child,
+    tr:first-child>td:nth-child(7)>img:first-child,
+    tr:first-child>td:last-child>img:last-child {
+      height: var(--imatge-petita-height);
+    }
+  </style>
+</head>
+
+<body>
+
+</body>
+
+</html>

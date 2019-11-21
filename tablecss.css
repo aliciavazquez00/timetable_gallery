@@ -1,0 +1,58 @@
+:root {
+  --imatges: 8;
+  --escala: 5;
+  --imatge-petita-amplada: calc(var(--escala)*16px);
+  --imatge-petita-height: calc(var(--escala)*9px);
+  --imatge-grossa-height: calc(var(--imatges)*var(--imatge-petita-height));
+}
+ img{
+   height:var(--imatge-petita-height);
+   display:block;
+ }
+
+ table,
+ tr,
+ td {
+   border-collapse: collapse;
+   margin: auto;
+   padding: 0;
+   line-height: 0;
+ }
+
+ td{
+   padding:0;
+ }
+
+ img:only-child{
+   height:var(--imatge-grossa-height);
+ }
+
+table:first-of-type img,
+table:nth-of-type(2) img{
+   float:left;
+}
+
+table:nth-child(n+3) img{
+  float:none;
+}
+
+
+
+
+
+
+/*
+tr:first-child>td:nth-child(2)>img:first-child {
+  height: var(--imatge-grossa-height);
+}*/
+
+/*tr:first-child>td:first-child>img:first-child,
+tr:nth-child(2)>td:first-child>img:first-child,
+tr:nth-child(3)>td:first-child>img:first-child,
+tr:nth-child(4)>td:first-child>img:first-child,
+tr:nth-child(5)>td:first-child>img:first-child,
+tr:nth-child(6)>td:first-child>img:first-child,
+tr:nth-child(7)>td:first-child>img:first-child,
+tr:last-child>td:first-child>img:first-child {
+  height: var(--imatge-petita-height);
+}*/

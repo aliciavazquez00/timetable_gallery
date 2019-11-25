@@ -1,0 +1,43 @@
+@import url(tablecss.css);
+html,body{
+
+}
+
+div{
+  display:block;
+  width:var(--imatge-grossa-height);
+  height:calc (var(--grossa-height) + var(--petita-height))
+}
+img:nth-child(2n+1):hover+img{
+  z-index:calc(1 + var(--imatges)); /*Ha d'esser més gran que la quantitat d'imatges. Ordre de les imatges.*/
+  /* Absolute :
+    Relative : Funciona si el contenedor está posicionat.
+  */
+  visibility: visible;
+}
+
+img:nth-child(2n)  {
+  height: var(--grossa-height);
+  position:absolute;
+  top:var(--petita-height);
+  left:0px;
+  visibility: hidden;
+}
+
+/*GRID*/
+img{
+  display: block;
+}
+
+img:nth-of-type(2n+1){
+  width:var(--petita-width);
+}
+img:nth-of-type(2n){
+  width:var(--grossa-width);
+}
+div{
+  display: grid;
+  margin:auto;
+}
+div:first-of-type,
+div:

@@ -1,12 +1,16 @@
-:root {--imatges: 8;
+@import url(gradient.css);
+:root {
+--imatges: 8;
 --escala: 5;
 --imatge-petita-amplada: calc(var(--escala)*16px);
 --imatge-petita-height: calc(var(--escala)*9px);
 --imatge-grossa-height: calc(var(--imatges)*var(--imatge-petita-height));
 }
 
-img {
+img{
   height: var(--imatge-petita-height);
+  display: block;
+  float:left;
 }
 
 table,
@@ -17,7 +21,10 @@ td {
   padding: 0;
   line-height: 0;
 }
-
+img:nth-child(2n+1):hoover + img {
+ z-index:calc(1 + var(--imatges));
+  visibility: visible;
+}
 td {
   padding: 0;
 }
@@ -26,18 +33,10 @@ img:only-child {
   height: var(--imatge-grossa-height);
 }
 
-table:first-of-type img {
-  float: left;
-}
 
-table:nth-of-type(2) img {
-  float: left;
-  display: inline;
-}
 
-table:nth-child(n+3) img {
+table:nth-of-type(n+3) img {
   float: none;
-  display: block;
 }
 
 /*

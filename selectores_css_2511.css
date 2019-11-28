@@ -41,3 +41,35 @@ div{
 }
 div:first-of-type,
 div:
+
+
+1r
+2n
+top:0px;
+left:0px;
+position:relative;
+3r
+float:none;
+4t
+display flex
+
+
+donar cc a 4
+
+/*
+
+*/
+div{
+background-color: #6668;
+he
+}
+
+div:nth-of-type(2) > img:nth-child(2n){
+  bottom: 0px;
+}
+div:last-of-type > img:nth-child(2n){
+  left:0px;
+}
+div > img:nth-child(2n){
+  visibility: visible;
+}

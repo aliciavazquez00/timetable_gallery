@@ -13,21 +13,34 @@ div:nth-of-type(2n+1)>img:first-child {
   height: var(--imatge-grossa-height);
 }
 
-div{
+div {
   height: var(--imatge-grossa-height);
 }
-div:first-of-type, div:nth-of-type(2) {
- top:0px;
- left:0px;
+
+div:first-of-type img{
+  top: 0px;
+  left: 0px;
   position: relative;
 }
-
+div:first-of-type > img{
+}
 img {
   height: var(--imatge-petita-height);
+  float: left;
+  position: relative;
 }
 
 div {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+div:nth-of-type(3) > img:nth-child(2n){
+  bottom: 0px;
+}
+div:last-of-type > img:nth-child(2n){
+  left:0px;
+}
+div > img:nth-child(2n){
+  visibility: visible;
 }

@@ -8,6 +8,8 @@
   --imatge-grossa-height: calc(var(--imatges)*var(--imatge-petita-height));
 }
 
+html, body {}
+
 div:nth-of-type(2n)>img:first-child,
 div:nth-of-type(2n+1)>img:first-child {
   height: var(--imatge-grossa-height);
@@ -17,17 +19,20 @@ div {
   height: var(--imatge-grossa-height);
 }
 
-div:first-of-type img{
+div:first-of-type img {
+  align-items: flex-start;
+}
+
+div:first-of-type>img:nth-child(2n) {
   top: 0px;
   left: 0px;
   position: relative;
+  float: left;
+  display: table-row;
 }
-div:first-of-type > img{
-}
+
 img {
   height: var(--imatge-petita-height);
-  float: left;
-  position: relative;
 }
 
 div {
@@ -35,12 +40,7 @@ div {
   justify-content: center;
   align-items: center;
 }
-div:nth-of-type(3) > img:nth-child(2n){
-  bottom: 0px;
-}
-div:last-of-type > img:nth-child(2n){
-  left:0px;
-}
-div > img:nth-child(2n){
+
+div>img:nth-child(2n) {
   visibility: visible;
 }
